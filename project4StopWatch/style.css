@@ -1,0 +1,48 @@
+body{
+    font-family: sans-serif;
+    background: #0affff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 60%;
+    height: 250px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 30px;
+}
+#timer{
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+.buttons{
+    text-align: center;
+
+}
+button{
+    margin: 0 5px;
+    padding: 0;
+}
+button i{
+    font-size: 2rem;
+    padding: 10px;
+
+}
+
+#play{
+    background-color: green;
+}
+#reset{
+    background-color: red;
+}
+#pause{
+    background-color: orange;
+}
+

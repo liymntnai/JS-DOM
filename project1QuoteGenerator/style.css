@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('fonts/Roboto-Black.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('../images/photo-mountain.jpg') no-repeat center center/ cover;
+
+}
+.title{
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    background-color: #232323;
+    color: white;
+    font-family: 'Roboto-Black',sans-serif;
+    margin: 20px auto;
+}
+
+.container{
+    margin:50px auto;
+    width: 60%;
+    height: 540px;
+
+}
+.main-content{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px 40px;
+    box-shadow: 0 0 10px;
+
+}
+.quote{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.author{
+    margin-top: 20px;
+    color: red;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.btn{
+  text-align: center;
+}
+.btn button{
+    margin-top: 20px;
+    padding: 8px 30px;
+    color: #fff;
+    background: #232323;
+}

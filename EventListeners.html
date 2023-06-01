@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListeners</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 20px;
+        }
+        #main-heading{
+            font-size: 40px;
+            text-align: center;
+            margin: 30px;
+        }
+        .boxes{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 40px;
+            width:100vh
+        }
+        .btn{
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-left: 30px;
+        }
+        .hidden-content{
+            display: none;
+        }
+        .hidden-content.reveal-btn{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Event Listeners</h1>
+    <div class="container">
+
+        <div class="boxes box-1">
+            <h1 class="heading">Example 1</h1>
+            <button class="btn reveal-btn">Reveal more</button>
+            
+            <div class="hidden-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, nostrum. Eaque optio hic excepturi deleniti in voluptates consequatur, non laudantium delectus commodi est veritatis aspernatur et?
+                 Voluptas accusamus culpa quis.
+            </div>
+        </div>
+
+        <div class="boxes box-2">
+            <h1 class="heading">Example 2</h1>
+            <button class="btn btn-2">Click here</button>
+        </div>
+        <div class="boxes box-3">
+            <h1 class="heading">Example 3</h1>
+            <button class="btn btn-3">Click here</button>
+        </div>
+    </div>
+    <script src="dom3EventListeners.js"></script>
+</body>
+</html>

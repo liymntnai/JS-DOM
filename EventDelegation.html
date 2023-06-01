@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 40px;
+            margin: auto;
+            width:200px;
+            text-align: center;
+        }
+        li{
+            display: block;
+            padding: 5px 8px;
+            margin: auto;
+            width:80%;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-size: 22px;
+            position: relative;
+        }
+        li::after{
+            content: '+';
+            position: absolute;
+            right: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="sports">
+        <li id="football">Football</li>
+        <li id="basket">Basket</li>
+        <li id="boxing">Boxing</li>
+        <li id="tennis">Tennis</li>
+        <li id="golf">Golf</li>
+    </ul>
+    <script src="EventDelegation.js"></script>
+</body>
+</html>

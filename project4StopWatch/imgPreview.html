@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 400px;
+            max-height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form runat="server">
+        <input accept="image/*" type='file' id="imgInp" />
+        <img id="blah" src="#" alt="your image" />
+      </form>
+      <script>
+        imgInp.onchange = evt => {
+  const [file] = imgInp.files
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }
+}
+      </script> -->
+
+      <form enctype="multipart/form-data" method="post" action="http://httpbin.org/post">
+        <label for="file-input">Select an image file</label>
+        <input accept="image/*" id="file-input" name="image" type="file">
+        <label for="file-selection-preview-image">Selected image</label>
+        <img id="file-selection-preview-image"><!-- this element will display selected image. -->
+        <input type="submit">
+        <script>
+            const form = document.currentScript.parentElement, file_input = form.elements.image;
+            file_input.addEventListener("change", function(ev) { /// Whenever the selection changes
+                const files = ev.target.files;
+                console.assert(files.length == 1); /// Assert that there is only one file selected
+                console.assert(files[0].type.startsWith("image/")); /// Assert that the selected file is an image
+                const image = form.querySelector("img");
+                if(image.src) URL.revokeObjectURL(image.src); /// The kind of URLs we are dealing with refer to in-memory objects, so we have to dispose of them when we no longer need them -- the user agent does not do this for us automatically.
+                image.src = URL.createObjectURL(files[0]); /// Display selected file with the `img` element
+            });
+            /// User agent is free to retain file selection even after the Web page has been re-loaded, so if there is [a selection], we fire a "change" event manually so that the handler defined above may reflect this as it ordinarily would.
+            if(file_input.files.length) file_input.dispatchEvent(new Event("change", { bubbles: true }));
+        </script>
+    </form>
+</body>
+</html>
